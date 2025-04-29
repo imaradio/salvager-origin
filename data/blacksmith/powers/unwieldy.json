@@ -54,6 +54,18 @@
 				},
 				{
 					"type": "origins:ingredient",
+					"ingredient": { "tag": "c:ranged_weapons" }
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": { "item": "minecraft:golden_apple" }
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": { "item": "minecraft:enchanted_golden_apple" }
+				},
+				{
+					"type": "origins:ingredient",
 					"ingredient": { "item": "minecraft:ender_pearl" }
 				},
 				{

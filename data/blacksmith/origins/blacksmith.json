@@ -1,5 +1,7 @@
 {
 	"powers": [
+		"blacksmith:master_forging",
+		"blacksmith:trims/trim_detect_test",
 		"blacksmith:best_friend",
 		"blacksmith:unwieldy"
 	],
