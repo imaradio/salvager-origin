@@ -1,13 +1,14 @@
 {
 	"powers": [
 		"blacksmith:master_forging",
+		"blacksmith:smart_smithing",
 		"blacksmith:trims/trim_detect_test",
 		"blacksmith:best_friend",
 		"blacksmith:unwieldy"
 	],
 	"icon": "minecraft:silence_armor_trim_smithing_template",
-	"order": 1,
-	"impact": 2,
+	"order": 999999,
+	"impact": 3,
 	"name": "Blacksmith",
 	"description": "description here"
 }
