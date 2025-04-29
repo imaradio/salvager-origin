@@ -1,0 +1,90 @@
+{
+	"type": "origins:multiple",
+	"name": "Blacksmith's Best Friend",
+	"description": "As your preferred tool, holding a pickaxe gives various buffs.",
+
+	"effects": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "minecraft:haste",
+					"duration": 5,
+					"is_ambient": true,
+					"show_particles": true,
+					"show_icon": false
+				},
+				{
+					"effect": "minecraft:night_vision",
+					"duration": 5,
+					"is_ambient": true,
+					"show_particles": true,
+					"show_icon": false
+				}
+			]
+		},
+		"interval": 4,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				}
+			]
+		}
+	},
+
+	"attribute": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"operation": "addition",
+			"value": 4,
+			"name": "increased attack dmg when using pickaxe"
+		},
+		"tick_rate": 4,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				}
+			]
+		}
+	}
+}
