@@ -1,0 +1,96 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+
+	"head": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "addition",
+			"value": 4,
+			"name": "+4 armor, sentry pattern"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:sentry"
+					}
+				}
+			}
+		}
+	},
+
+	"chest": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "addition",
+			"value": 4,
+			"name": "+4 armor, sentry pattern"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:sentry"
+					}
+				}
+			}
+		}
+	},
+
+	"legs": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "addition",
+			"value": 4,
+			"name": "+4 armor, sentry pattern"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:sentry"
+					}
+				}
+			}
+		}
+	},
+
+	"feet": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "addition",
+			"value": 4,
+			"name": "+4 armor, sentry pattern"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:sentry"
+					}
+				}
+			}
+		}
+	}
+}

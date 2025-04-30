@@ -2,7 +2,9 @@
 	"powers": [
 		"blacksmith:master_forging",
 		"blacksmith:smart_smithing",
-		"blacksmith:trims/trim_detect_test",
+		"blacksmith:trims/pattern/coast",
+		"blacksmith:trims/pattern/sentry",
+		"blacksmith:trims/pattern/wild",
 		"blacksmith:best_friend",
 		"blacksmith:unwieldy"
 	],
