@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"name": "Smart Smithing",
-	"description": "After years of working on armour, you've realised how ineffecient it is to craft armour trims. As such, you've figured out how to craft them more effectively.",
+	"description": "After years of working on armour, you've grown frustrated at how ineffecient it is to craft armour trims. As such, you've developed a more cost-effective method to craft them.",
 
 	"sentry": {
 		"type": "origins:recipe",

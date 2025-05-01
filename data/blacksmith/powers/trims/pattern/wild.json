@@ -5,8 +5,7 @@
 	"resource": {
 		"type": "origins:resource",
 		"min": 0,
-		"max": 4,
-		"hud_render": { "should_render": true }
+		"max": 4
 	},
 
 	"modify_damage_dealt_1": {
