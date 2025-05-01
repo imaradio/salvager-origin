@@ -55,6 +55,43 @@
 		}
 	},
 
+	"invulnerability": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:constant",
+			"value": true
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_cooldown_1",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_cooldown_2",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_cooldown_3",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_cooldown_4",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+
 	"cooldown_1": {
 		"type": "origins:cooldown",
 		"cooldown": 20
@@ -81,7 +118,7 @@
 			"type": "origins:trigger_cooldown",
 			"power": "*:*_cooldown_1"
 		},
-		"cooldown": 100,
+		"cooldown": 300,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -133,7 +170,7 @@
 			"type": "origins:trigger_cooldown",
 			"power": "*:*_cooldown_2"
 		},
-		"cooldown": 100,
+		"cooldown": 300,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -185,7 +222,7 @@
 			"type": "origins:trigger_cooldown",
 			"power": "*:*_cooldown_3"
 		},
-		"cooldown": 100,
+		"cooldown": 300,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -237,7 +274,7 @@
 			"type": "origins:trigger_cooldown",
 			"power": "*:*_cooldown_4"
 		},
-		"cooldown": 100,
+		"cooldown": 300,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
