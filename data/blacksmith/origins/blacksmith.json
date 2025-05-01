@@ -4,8 +4,9 @@
 		"blacksmith:smart_smithing",
 		"blacksmith:trims/pattern/coast",
 		"blacksmith:trims/pattern/sentry",
-		"blacksmith:trims/pattern/wild",
+		"blacksmith:trims/pattern/tide",
 		"blacksmith:trims/pattern/ward",
+		"blacksmith:trims/pattern/wild",
 		"blacksmith:best_friend",
 		"blacksmith:unwieldy"
 	],
