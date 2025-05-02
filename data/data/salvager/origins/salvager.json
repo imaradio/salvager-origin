@@ -1,0 +1,27 @@
+{
+	"powers": [
+		"salvager:master_forging",
+		"salvager:trims/material/amethyst",
+		"salvager:trims/material/copper",
+		"salvager:trims/material/diamond",
+		"salvager:trims/material/gold",
+		"salvager:trims/material/iron",
+		"salvager:trims/material/netherite",
+		"salvager:trims/material/quartz",
+		"salvager:trims/material/redstone",
+		"salvager:trims/pattern/coast",
+		"salvager:trims/pattern/sentry",
+		"salvager:trims/pattern/tide",
+		"salvager:trims/pattern/vex",
+		"salvager:trims/pattern/ward",
+		"salvager:trims/pattern/wild",
+		"salvager:smart_smithing",
+		"salvager:best_friend",
+		"salvager:unwieldy"
+	],
+	"icon": "minecraft:silence_armor_trim_smithing_template",
+	"order": 999999,
+	"impact": 3,
+	"name": "Salvager",
+	"description": "description here"
+}
