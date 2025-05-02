@@ -2,8 +2,10 @@
 	"powers": [
 		"blacksmith:master_forging",
 		"blacksmith:smart_smithing",
+		"blacksmith:trims/material/copper",
 		"blacksmith:trims/material/gold",
 		"blacksmith:trims/material/iron",
+		"blacksmith:trims/material/netherite",
 		"blacksmith:trims/material/quartz",
 		"blacksmith:trims/material/redstone",
 		"blacksmith:trims/pattern/coast",
