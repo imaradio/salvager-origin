@@ -1,0 +1,185 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+
+	"aqua_affinity": {
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:submerged_in",
+									"fluid": "minecraft:water"
+								},
+								{
+									"type": "origins:enchantment",
+									"enchantment": "minecraft:aqua_affinity",
+									"comparison": "==",
+									"compare_to": 0
+									}
+								]
+						},
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:fluid_height",
+									"fluid": "minecraft:water",
+									"comparison": ">",
+									"compare_to": 0
+								},
+								{
+									"type": "origins:on_block",
+									"inverted": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "head",
+							"item_condition": {
+								"type": "origins:nbt",
+								"nbt": {
+									"Trim": {
+										"pattern": "minecraft:coast"
+									}
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "chest",
+							"item_condition": {
+								"type": "origins:nbt",
+								"nbt": {
+									"Trim": {
+										"pattern": "minecraft:coast"
+									}
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "legs",
+							"item_condition": {
+								"type": "origins:nbt",
+								"nbt": {
+									"Trim": {
+										"pattern": "minecraft:coast"
+									}
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "feet",
+							"item_condition": {
+								"type": "origins:nbt",
+								"nbt": {
+									"Trim": {
+										"pattern": "minecraft:coast"
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	},
+
+	"head": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.02
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:coast"
+					}
+				}
+			}
+		}
+	},
+
+	"chest": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.02
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:coast"
+					}
+				}
+			}
+		}
+	},
+
+	"legs": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.02
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:coast"
+					}
+				}
+			}
+		}
+	},
+
+	"feet": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.02
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:coast"
+					}
+				}
+			}
+		}
+	}
+}
