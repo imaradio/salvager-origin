@@ -9,6 +9,11 @@
 			"operation": "addition",
 			"value": 1
 		},
+		"saturation_modifier": {
+			"name": "+1 saturation, gold trim material",
+			"operation": "addition",
+			"value": 1
+		},
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "head",
@@ -27,6 +32,11 @@
 		"type": "origins:modify_food",
 		"food_modifier": {
 			"name": "+1 food, gold trim material",
+			"operation": "addition",
+			"value": 1
+		},
+		"saturation_modifier": {
+			"name": "+1 saturation, gold trim material",
 			"operation": "addition",
 			"value": 1
 		},
@@ -51,6 +61,11 @@
 			"operation": "addition",
 			"value": 1
 		},
+		"saturation_modifier": {
+			"name": "+1 saturation, gold trim material",
+			"operation": "addition",
+			"value": 1
+		},
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "legs",
@@ -69,6 +84,11 @@
 		"type": "origins:modify_food",
 		"food_modifier": {
 			"name": "+1 food, gold trim material",
+			"operation": "addition",
+			"value": 1
+		},
+		"saturation_modifier": {
+			"name": "+1 saturation, gold trim material",
 			"operation": "addition",
 			"value": 1
 		},

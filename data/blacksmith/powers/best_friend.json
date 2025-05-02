@@ -3,26 +3,17 @@
 	"name": "Blacksmith's Best Friend",
 	"description": "As your preferred tool, holding a pickaxe gives various buffs.",
 
-	"effects": {
+	"night_vision": {
 		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:apply_effect",
-			"effects": [
-				{
-					"effect": "minecraft:haste",
-					"duration": 5,
-					"is_ambient": true,
-					"show_particles": true,
-					"show_icon": false
-				},
-				{
-					"effect": "minecraft:night_vision",
-					"duration": 5,
-					"is_ambient": true,
-					"show_particles": true,
-					"show_icon": false
-				}
-			]
+			"effect": {
+				"effect": "minecraft:night_vision",
+				"duration": 5,
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			}
 		},
 		"interval": 4,
 		"condition": {
@@ -54,13 +45,55 @@
 
 	"attribute": {
 		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.attack_damage",
-			"operation": "addition",
-			"value": 4,
-			"name": "increased attack dmg when using pickaxe"
-		},
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "addition",
+				"value": 4,
+				"name": "increased attack dmg when using pickaxe"
+			},
+			{
+				"attribute": "minecraft:generic.attack_speed",
+				"operation": "addition",
+				"value": 0.1,
+				"name": "increased attack speed when using pickaxe"
+			}
+
+		],
 		"tick_rate": 4,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "c:pickaxes"
+						}
+					}
+				}
+			]
+		}
+	},
+
+	"modify_break_speed": {
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.02
+		},
 		"condition": {
 			"type": "origins:or",
 			"conditions": [
