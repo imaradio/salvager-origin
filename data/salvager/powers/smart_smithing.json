@@ -7,7 +7,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:sentry",
+			"id": "salvager:sentry",
 			"ingredients": [
 				{
 					"item": "minecraft:sentry_armor_trim_smithing_template"
@@ -30,7 +30,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:vex",
+			"id": "salvager:vex",
 			"ingredients": [
 				{
 					"item": "minecraft:vex_armor_trim_smithing_template"
@@ -53,7 +53,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:wild",
+			"id": "salvager:wild",
 			"ingredients": [
 				{
 					"item": "minecraft:wild_armor_trim_smithing_template"
@@ -76,7 +76,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:coast",
+			"id": "salvager:coast",
 			"ingredients": [
 				{
 					"item": "minecraft:coast_armor_trim_smithing_template"
@@ -99,7 +99,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:dune",
+			"id": "salvager:dune",
 			"ingredients": [
 				{
 					"item": "minecraft:dune_armor_trim_smithing_template"
@@ -122,7 +122,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:wayfinder",
+			"id": "salvager:wayfinder",
 			"ingredients": [
 				{
 					"item": "minecraft:wayfinder_armor_trim_smithing_template"
@@ -145,7 +145,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:raiser",
+			"id": "salvager:raiser",
 			"ingredients": [
 				{
 					"item": "minecraft:raiser_armor_trim_smithing_template"
@@ -168,7 +168,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:shaper",
+			"id": "salvager:shaper",
 			"ingredients": [
 				{
 					"item": "minecraft:shaper_armor_trim_smithing_template"
@@ -191,7 +191,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:host",
+			"id": "salvager:host",
 			"ingredients": [
 				{
 					"item": "minecraft:host_armor_trim_smithing_template"
@@ -214,7 +214,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:ward",
+			"id": "salvager:ward",
 			"ingredients": [
 				{
 					"item": "minecraft:ward_armor_trim_smithing_template"
@@ -237,7 +237,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:silence",
+			"id": "salvager:silence",
 			"ingredients": [
 				{
 					"item": "minecraft:silence_armor_trim_smithing_template"
@@ -260,7 +260,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:tide",
+			"id": "salvager:tide",
 			"ingredients": [
 				{
 					"item": "minecraft:tide_armor_trim_smithing_template"
@@ -283,7 +283,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:snout",
+			"id": "salvager:snout",
 			"ingredients": [
 				{
 					"item": "minecraft:snout_armor_trim_smithing_template"
@@ -306,7 +306,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:rib",
+			"id": "salvager:rib",
 			"ingredients": [
 				{
 					"item": "minecraft:rib_armor_trim_smithing_template"
@@ -329,7 +329,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:eye",
+			"id": "salvager:eye",
 			"ingredients": [
 				{
 					"item": "minecraft:eye_armor_trim_smithing_template"
@@ -352,7 +352,7 @@
 		"type": "origins:recipe",
 		"recipe": {
 			"type": "minecraft:crafting_shapeless",
-			"id": "blacksmith:spire",
+			"id": "salvager:spire",
 			"ingredients": [
 				{
 					"item": "minecraft:spire_armor_trim_smithing_template"

@@ -1,6 +1,6 @@
 {
 	"type": "origins:multiple",
-	"name": "Blacksmith's Best Friend",
+	"name": "Salvager's Best Friend",
 	"description": "As your preferred tool, holding a pickaxe gives various buffs.",
 
 	"night_vision": {

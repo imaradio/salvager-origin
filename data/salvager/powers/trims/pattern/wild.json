@@ -31,7 +31,7 @@
 				},
 				{
 					"type": "origins:predicate",
-					"predicate": "blacksmith:quarter_chance"
+					"predicate": "salvager:quarter_chance"
 				}
 			]
 		},
@@ -64,7 +64,7 @@
 				},
 				{
 					"type": "origins:predicate",
-					"predicate": "blacksmith:half_chance"
+					"predicate": "salvager:half_chance"
 				}
 			]
 		},
@@ -97,7 +97,7 @@
 				},
 				{
 					"type": "origins:predicate",
-					"predicate": "blacksmith:three_quarter_chance"
+					"predicate": "salvager:three_quarter_chance"
 				}
 			]
 		},
