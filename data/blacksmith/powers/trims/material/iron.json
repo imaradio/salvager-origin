@@ -1,0 +1,96 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+
+	"head": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.knockback_resistance",
+			"operation": "addition",
+			"value": 0.1,
+			"name": "+1 kb res, iron trim material"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"material": "minecraft:iron"
+					}
+				}
+			}
+		}
+	},
+
+	"chest": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.knockback_resistance",
+			"operation": "addition",
+			"value": 0.1,
+			"name": "+1 kb res, iron trim material"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"material": "minecraft:iron"
+					}
+				}
+			}
+		}
+	},
+
+	"legs": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.knockback_resistance",
+			"operation": "addition",
+			"value": 0.1,
+			"name": "+1 kb res, iron trim material"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"material": "minecraft:iron"
+					}
+				}
+			}
+		}
+	},
+
+	"feet": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.knockback_resistance",
+			"operation": "addition",
+			"value": 0.1,
+			"name": "+1 kb res, iron trim material"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"material": "minecraft:iron"
+					}
+				}
+			}
+		}
+	}
+}
