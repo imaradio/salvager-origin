@@ -51,6 +51,30 @@
 					"comparison": "==",
 					"compare_to": 1
 				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_1",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_3",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_4",
+					"comparison": "==",
+					"compare_to": 0
+				},
 				{ "type": "origins:sneaking" }
 			]
 		},
@@ -101,6 +125,30 @@
 					"resource": "*:*_resource",
 					"comparison": "==",
 					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_1",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_3",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_4",
+					"comparison": "==",
+					"compare_to": 0
 				},
 				{ "type": "origins:sneaking" }
 			]
@@ -153,6 +201,30 @@
 					"comparison": "==",
 					"compare_to": 3
 				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_1",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_3",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_4",
+					"comparison": "==",
+					"compare_to": 0
+				},
 				{ "type": "origins:sneaking" }
 			]
 		},
@@ -203,6 +275,30 @@
 					"resource": "*:*_resource",
 					"comparison": "==",
 					"compare_to": 4
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_1",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_3",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active_self_4",
+					"comparison": "==",
+					"compare_to": 0
 				},
 				{ "type": "origins:sneaking" }
 			]
