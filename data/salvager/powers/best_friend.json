@@ -9,13 +9,17 @@
 			"type": "origins:apply_effect",
 			"effect": {
 				"effect": "minecraft:night_vision",
-				"duration": 5,
+				"duration": 300,
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			}
 		},
-		"interval": 4,
+		"falling_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:night_vision"
+		},
+		"interval": 2,
 		"condition": {
 			"type": "origins:or",
 			"conditions": [

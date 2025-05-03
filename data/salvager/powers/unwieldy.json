@@ -54,10 +54,6 @@
 				},
 				{
 					"type": "origins:ingredient",
-					"ingredient": { "tag": "c:ranged_weapons" }
-				},
-				{
-					"type": "origins:ingredient",
 					"ingredient": { "item": "minecraft:golden_apple" }
 				},
 				{
@@ -73,6 +69,48 @@
 					"ingredient": { "item": "minecraft:chorus_fruit" }
 				}
 			]
+		}
+	},
+
+	"prevent_bow_use": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": { "item": "minecraft:bow" }
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:trims/pattern/snout_resource",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+
+	"prevent_crossbow_use": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": { "item": "minecraft:crossbow" }
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:trims/pattern/snout_resource",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+
+	"prevent_trident_use": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": { "item": "minecraft:trident" }
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:trims/pattern/snout_resource",
+			"comparison": "==",
+			"compare_to": 0
 		}
 	},
 
