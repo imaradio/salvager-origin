@@ -1,0 +1,322 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+
+	"resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 4
+	},
+
+	"active_self_1": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 6,
+			"bientity_action": {
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:poison",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:wither",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				}
+			}
+		},
+		"cooldown": 1200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 11
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{ "type": "origins:sneaking" }
+			]
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+
+	"active_self_2": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 6,
+			"bientity_action": {
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:poison",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:wither",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				}
+			}
+		},
+		"cooldown": 1000,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 11
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{ "type": "origins:sneaking" }
+			]
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+
+	"active_self_3": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 6,
+			"bientity_action": {
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:poison",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:wither",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				}
+			}
+		},
+		"cooldown": 800,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 11
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": "==",
+					"compare_to": 3
+				},
+				{ "type": "origins:sneaking" }
+			]
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+
+	"active_self_4": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 6,
+			"bientity_action": {
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:poison",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:wither",
+							"duration": 100,
+							"amplifier": 1,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				}
+			}
+		},
+		"cooldown": 600,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 11
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": "==",
+					"compare_to": 4
+				},
+				{ "type": "origins:sneaking" }
+			]
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+	
+	"head": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:dune"
+					}
+				}
+			}
+		}
+	},
+
+	"chest": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:dune"
+					}
+				}
+			}
+		}
+	},
+
+	"legs": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:dune"
+					}
+				}
+			}
+		}
+	},
+
+	"feet": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:dune"
+					}
+				}
+			}
+		}
+	}
+}
