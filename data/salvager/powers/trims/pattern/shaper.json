@@ -194,6 +194,74 @@
 		}
 	},
 
+	"armour_attribute_1": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "multiply_total",
+			"value": -0.3,
+			"name": "shaper armour, 70% armour"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+
+	"armour_attribute_2": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "multiply_total",
+			"value": -0.225,
+			"name": "shaper armour, 77.5% armour"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 2
+		}
+	},
+
+	"armour_attribute_3": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "multiply_total",
+			"value": -0.15,
+			"name": "shaper armour, 85% armour"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	},
+
+	"armour_attribute_4": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.armor",
+			"operation": "multiply_total",
+			"value": -0.075,
+			"name": "shaper armour, 92.5% armour"
+		},
+		"tick_rate": 2,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 4
+		}
+	},
+
 	"head": {
 		"type": "origins:action_over_time",
 		"rising_action": {
