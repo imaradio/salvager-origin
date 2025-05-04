@@ -334,11 +334,18 @@
 			"actions": [
 				{
 					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:levitation",
-						"duration": 6,
-						"show_particles": false
-					}
+					"effects": [
+						{
+							"effect": "minecraft:levitation",
+							"duration": 6,
+							"show_particles": false
+						},
+						{
+							"effect": "minecraft:slow_falling",
+							"duration": 400,
+							"show_particles": false
+						}
+					]
 				},
 				{
 					"type": "origins:change_resource",
@@ -378,11 +385,18 @@
 			"actions": [
 				{
 					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:levitation",
-						"duration": 6,
-						"show_particles": false
-					}
+					"effects": [
+						{
+							"effect": "minecraft:levitation",
+							"duration": 6,
+							"show_particles": false
+						},
+						{
+							"effect": "minecraft:slow_falling",
+							"duration": 400,
+							"show_particles": false
+						}
+					]
 				},
 				{
 					"type": "origins:change_resource",
@@ -422,11 +436,18 @@
 			"actions": [
 				{
 					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:levitation",
-						"duration": 6,
-						"show_particles": false
-					}
+					"effects": [
+						{
+							"effect": "minecraft:levitation",
+							"duration": 6,
+							"show_particles": false
+						},
+						{
+							"effect": "minecraft:slow_falling",
+							"duration": 400,
+							"show_particles": false
+						}
+					]
 				},
 				{
 					"type": "origins:change_resource",
@@ -466,11 +487,18 @@
 			"actions": [
 				{
 					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:levitation",
-						"duration": 6,
-						"show_particles": false
-					}
+					"effects": [
+						{
+							"effect": "minecraft:levitation",
+							"duration": 6,
+							"show_particles": false
+						},
+						{
+							"effect": "minecraft:slow_falling",
+							"duration": 400,
+							"show_particles": false
+						}
+					]
 				},
 				{
 					"type": "origins:change_resource",
