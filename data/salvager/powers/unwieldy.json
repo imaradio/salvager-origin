@@ -108,7 +108,7 @@
 		},
 		"condition": {
 			"type": "origins:resource",
-			"resource": "*:trims/pattern/rib_resource",
+			"resource": "*:trims/pattern/coast_resource",
 			"comparison": "==",
 			"compare_to": 0
 		}
