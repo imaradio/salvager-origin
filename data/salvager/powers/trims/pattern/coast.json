@@ -108,6 +108,12 @@
 				},
 				{
 					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
 					"resource": "*:*_active_self_not_in_water",
 					"comparison": "==",
 					"compare_to": 0
@@ -161,6 +167,12 @@
 						"block": "minecraft:water"
 					},
 					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_resource",
+					"comparison": ">=",
+					"compare_to": 1
 				},
 				{
 					"type": "origins:resource",
