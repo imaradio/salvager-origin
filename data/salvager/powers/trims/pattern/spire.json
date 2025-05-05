@@ -61,6 +61,11 @@
 		}
 	},
 
+	"toggle_can_fly_bool": {
+		"type": "origins:toggle",
+		"key": { "key": "key.spectatorOutlines" }
+	},
+
 	"action_on_hit_1": {
 		"type": "origins:action_on_hit",
 		"bientity_action": {
@@ -280,35 +285,68 @@
 	"charge_flight_resource": {
 		"type": "origins:action_over_time",
 		"entity_action": {
-			"type": "origins:if_else",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_flight_resource",
-				"comparison": ">=",
-				"compare_to": 100
-			},
-			"if_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:change_resource",
-						"resource": "*:*_flight_resource",
-						"change": 2
-					},
-					{
-						"type": "origins:change_resource",
-						"resource": "*:*_can_fly_bool",
-						"change": -1
-					}
-				]
-			},
-			"else_action": {
-				"type": "origins:change_resource",
-				"resource": "*:*_flight_resource",
-				"change": 2
-			}
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_flight_resource",
+					"change": 1
+				},
+				{
+					"type": "origins:if_else_list",
+					"actions": [
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "*:*_flight_resource",
+										"comparison": ">=",
+										"compare_to": 100
+									},
+									{
+										"type": "origins:power_active",
+										"power": "*:*_toggle_can_fly_bool",
+										"inverted": true
+									}
+								]
+							},
+							"action": {
+								"type": "origins:change_resource",
+								"resource": "*:*_can_fly_bool",
+								"change": 0,
+								"operation": "set"
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:or",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "*:*_flight_resource",
+										"comparison": "<",
+										"compare_to": 100
+									},
+									{
+										"type": "origins:power_active",
+										"power": "*:*_toggle_can_fly_bool"
+									}
+								]
+							},
+							"action": {
+								"type": "origins:change_resource",
+								"resource": "*:*_can_fly_bool",
+								"change": 1,
+								"operation": "set"
+							}
+						}
+					]
+				}
+			]
 		},
-		"interval": 20,
+		"interval": 7,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -338,6 +376,7 @@
 						{
 							"effect": "minecraft:levitation",
 							"duration": 6,
+							"amplifier": 1,
 							"show_particles": false
 						},
 						{
@@ -389,6 +428,7 @@
 						{
 							"effect": "minecraft:levitation",
 							"duration": 6,
+							"amplifier": 1,
 							"show_particles": false
 						},
 						{
@@ -440,6 +480,7 @@
 						{
 							"effect": "minecraft:levitation",
 							"duration": 6,
+							"amplifier": 1,
 							"show_particles": false
 						},
 						{
@@ -491,6 +532,7 @@
 						{
 							"effect": "minecraft:levitation",
 							"duration": 6,
+							"amplifier": 1,
 							"show_particles": false
 						},
 						{
