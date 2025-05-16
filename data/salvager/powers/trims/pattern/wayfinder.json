@@ -431,6 +431,9 @@
           "resource": "*:*_resource",
           "comparison": ">",
           "compare_to": 0
+        },
+        {
+          "type": "origins:sneaking"
         }
       ]
     }
