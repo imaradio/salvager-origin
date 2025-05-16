@@ -1,15 +1,5 @@
 {
-	"type": "origins:action_on_block_use",
-	"block_condition": {
-		"type": "origins:block",
-		"block": "minecraft:grindstone"
-	},
-	"hands": [ "main_hand" ],
-	"held_item_action": {
-		"type": "origins:merge_nbt",
-		"nbt": "{Trim: {material: \"\", pattern: \"\"}}"
-	},
-	"condition": { "type": "origins:sneaking" },
+	"type": "origins:simple",
 	"name": "Master Forging",
-	"description": "Based on how you trim an armour piece, you gain varying abilities. Having done this so much, you've worked out that you can remove a trim by scraping it against a grindstone while sneaking."
+	"description": "Based on how you trim an armour piece, you gain varying abilities."
 }
