@@ -33,7 +33,7 @@
 
   "death_cooldown": {
     "type": "origins:cooldown",
-    "cooldown": 600,
+    "cooldown": 900,
     "hud_render": {
       "should_render": true,
       "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
@@ -152,7 +152,8 @@
                   "type": "origins:apply_effect",
                   "effect": {
                     "effect": "minecraft:regeneration",
-                    "duration": 40,
+                    "amplifier": 1,
+                    "duration": 100,
                     "show_particles": false
                   }
                 },
@@ -235,7 +236,8 @@
                   "type": "origins:apply_effect",
                   "effect": {
                     "effect": "minecraft:regeneration",
-                    "duration": 80,
+                    "amplifier": 1,
+                    "duration": 160,
                     "show_particles": false
                   }
                 },
@@ -318,7 +320,8 @@
                   "type": "origins:apply_effect",
                   "effect": {
                     "effect": "minecraft:regeneration",
-                    "duration": 120,
+                    "amplifier": 1,
+                    "duration": 220,
                     "show_particles": false
                   }
                 },
@@ -401,7 +404,8 @@
                   "type": "origins:apply_effect",
                   "effect": {
                     "effect": "minecraft:regeneration",
-                    "duration": 160,
+                    "amplifier": 1,
+                    "duration": 280,
                     "show_particles": false
                   }
                 },
