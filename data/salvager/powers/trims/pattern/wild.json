@@ -538,15 +538,6 @@
 
 	"modify_damage_dealt_1": {
 		"type": "origins:modify_damage_dealt",
-		"self_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:weakness",
-				"duration": 400,
-				"amplifier": 1,
-				"show_particles": false
-			}
-		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -570,15 +561,6 @@
 
 	"modify_damage_dealt_2": {
 		"type": "origins:modify_damage_dealt",
-		"self_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:weakness",
-				"duration": 300,
-				"amplifier": 1,
-				"show_particles": false
-			}
-		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -602,15 +584,6 @@
 
 	"modify_damage_dealt_3": {
 		"type": "origins:modify_damage_dealt",
-		"self_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:weakness",
-				"duration": 200,
-				"amplifier": 1,
-				"show_particles": false
-			}
-		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -634,15 +607,6 @@
 
 	"modify_damage_dealt_4": {
 		"type": "origins:modify_damage_dealt",
-		"self_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:weakness",
-				"duration": 100,
-				"amplifier": 1,
-				"show_particles": false
-			}
-		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
