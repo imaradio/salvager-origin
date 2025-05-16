@@ -1,0 +1,534 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+
+	"resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 4,
+		"min_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_hit_resource",
+			"change": 0,
+			"operation": "set"
+		}
+	},
+
+	"hit_resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 2,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 9,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_resource",
+				"comparison": "!=",
+				"compare_to": 0
+			}
+		}
+	},
+
+  "death_cooldown": {
+    "type": "origins:cooldown",
+    "cooldown": 600,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+      "bar_index": 6
+    }
+  },
+
+  "prevent_death": {
+    "type": "origins:prevent_death",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:clear_effect"
+        },
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:absorption",
+              "duration": 200
+            },
+            {
+              "effect": "minecraft:weakness",
+              "amplifier": 3,
+              "duration": 100
+            }
+          ]
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:item.totem.use"
+        },
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "*:*_death_cooldown"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": ">",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_death_cooldown",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+
+	"when_hit_1": {
+		"type": "origins:action_when_hit",
+		"bientity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 0
+                },
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 1
+                }
+              ]
+						}
+					},
+					"action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_hit_resource",
+							"change": 1
+						}
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:resource",
+							"resource": "*:*_hit_resource",
+							"comparison": "==",
+							"compare_to": 2
+						}
+					},
+					"action": {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:change_resource",
+                  "resource": "*:*_hit_resource",
+                  "change": 0,
+                  "operation": "set"
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:regeneration",
+                    "duration": 40,
+                    "show_particles": false
+                  }
+                },
+                {
+                  "type": "origins:feed",
+                  "food": 2,
+                  "saturation": 0
+                }
+              ]
+            }
+          }
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+
+  "when_hit_2": {
+		"type": "origins:action_when_hit",
+		"bientity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 0
+                },
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 1
+                }
+              ]
+						}
+					},
+					"action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_hit_resource",
+							"change": 1
+						}
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:resource",
+							"resource": "*:*_hit_resource",
+							"comparison": "==",
+							"compare_to": 2
+						}
+					},
+					"action": {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:change_resource",
+                  "resource": "*:*_hit_resource",
+                  "change": 0,
+                  "operation": "set"
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:regeneration",
+                    "duration": 80,
+                    "show_particles": false
+                  }
+                },
+                {
+                  "type": "origins:feed",
+                  "food": 3,
+                  "saturation": 0
+                }
+              ]
+            }
+          }
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 2
+		}
+	},
+
+  "when_hit_3": {
+		"type": "origins:action_when_hit",
+		"bientity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 0
+                },
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 1
+                }
+              ]
+						}
+					},
+					"action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_hit_resource",
+							"change": 1
+						}
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:resource",
+							"resource": "*:*_hit_resource",
+							"comparison": "==",
+							"compare_to": 2
+						}
+					},
+					"action": {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:change_resource",
+                  "resource": "*:*_hit_resource",
+                  "change": 0,
+                  "operation": "set"
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:regeneration",
+                    "duration": 120,
+                    "show_particles": false
+                  }
+                },
+                {
+                  "type": "origins:feed",
+                  "food": 4,
+                  "saturation": 0
+                }
+              ]
+            }
+          }
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	},
+
+  "when_hit_4": {
+		"type": "origins:action_when_hit",
+		"bientity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 0
+                },
+                {
+                  "type": "origins:resource",
+                  "resource": "*:*_hit_resource",
+                  "comparison": "==",
+                  "compare_to": 1
+                }
+              ]
+						}
+					},
+					"action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_hit_resource",
+							"change": 1
+						}
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:resource",
+							"resource": "*:*_hit_resource",
+							"comparison": "==",
+							"compare_to": 2
+						}
+					},
+					"action": {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:change_resource",
+                  "resource": "*:*_hit_resource",
+                  "change": 0,
+                  "operation": "set"
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:regeneration",
+                    "duration": 160,
+                    "show_particles": false
+                  }
+                },
+                {
+                  "type": "origins:feed",
+                  "food": 5,
+                  "saturation": 0
+                }
+              ]
+            }
+          }
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"comparison": "==",
+			"compare_to": 4
+		}
+	},
+
+	"head": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:host"
+					}
+				}
+			}
+		}
+	},
+
+	"chest": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:host"
+					}
+				}
+			}
+		}
+	},
+
+	"legs": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:host"
+					}
+				}
+			}
+		}
+	},
+
+	"feet": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_resource",
+			"change": -1
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:nbt",
+				"nbt": {
+					"Trim": {
+						"pattern": "minecraft:host"
+					}
+				}
+			}
+		}
+	}
+}
