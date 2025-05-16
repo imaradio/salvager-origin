@@ -13,29 +13,14 @@
 		},
 		"tick_rate": 4,
 		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:axes"
-						}
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:axes"
-						}
-					}
-				}
-			]
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "c:axes"
+        }
+      }
 		}
 	},
 
@@ -124,29 +109,14 @@
 		},
 		"tick_rate": 4,
 		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:swords"
-						}
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:swords"
-						}
-					}
-				}
-			]
-		}
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "c:swords"
+        }
+      }
+    }
 	}
 }
