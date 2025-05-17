@@ -77,7 +77,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 6,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       },
       "shape_type": "outline",
       "command_along_ray": "particle minecraft:dust 1 0.75 1 1 ~ ~ ~ 0 0 0 0.1 5 force",
@@ -153,7 +153,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 8,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       },
       "shape_type": "outline",
       "command_along_ray": "particle minecraft:dust 1 0.75 1 1 ~ ~ ~ 0 0 0 0.1 5 force",
@@ -229,7 +229,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 10,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       },
       "shape_type": "outline",
       "command_along_ray": "particle minecraft:dust 1 0.75 1 1 ~ ~ ~ 0 0 0 0.1 5 force",
@@ -305,7 +305,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 12,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       },
       "shape_type": "outline",
       "command_along_ray": "particle minecraft:dust 1 0.75 1 1 ~ ~ ~ 0 0 0 0.1 5 force",
@@ -485,7 +485,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 3,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       }
     },
     "cooldown": 100,
@@ -559,7 +559,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 4,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       }
     },
     "cooldown": 100,
@@ -633,7 +633,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 5,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       }
     },
     "cooldown": 100,
@@ -707,7 +707,7 @@
       "bientity_action": {
         "type": "origins:damage",
         "amount": 6,
-        "damage_type": "minecraft:player_attack"
+        "damage_type": "minecraft:magic"
       }
     },
     "cooldown": 100,
