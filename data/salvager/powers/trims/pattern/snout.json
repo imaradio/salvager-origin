@@ -38,7 +38,7 @@
 	"modify_damage_dealt_1": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"operation": "add_base_early",
+			"operation": "addition",
 			"value": 4
 		},
 		"condition": {
@@ -78,7 +78,7 @@
 	"modify_damage_dealt_2": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"operation": "add_base_early",
+			"operation": "addition",
 			"value": 5
 		},
 		"condition": {
@@ -118,7 +118,7 @@
 	"modify_damage_dealt_3": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"operation": "add_base_early",
+			"operation": "addition",
 			"value": 6
 		},
 		"condition": {
@@ -158,7 +158,7 @@
 	"modify_damage_dealt_4": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"operation": "add_base_early",
+			"operation": "addition",
 			"value": 7
 		},
 		"condition": {
