@@ -70,7 +70,7 @@
       "actions": [
         {
           "type": "origins:trigger_cooldown",
-          "power": "*:*_cooldown_4"
+          "power": "*:*_cooldown_1"
         },
         {
           "type": "origins:execute_command",
@@ -159,7 +159,7 @@
       "actions": [
         {
           "type": "origins:trigger_cooldown",
-          "power": "*:*_cooldown_4"
+          "power": "*:*_cooldown_2"
         },
         {
           "type": "origins:execute_command",
@@ -248,7 +248,7 @@
       "actions": [
         {
           "type": "origins:trigger_cooldown",
-          "power": "*:*_cooldown_4"
+          "power": "*:*_cooldown_3"
         },
         {
           "type": "origins:execute_command",
