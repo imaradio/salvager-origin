@@ -6,19 +6,10 @@
     "min": 0,
     "max": 4,
     "min_action": {
-      "type": "origins:and",
-      "actions": [
-        {
-          "type": "origins:change_resource",
-          "resource": "*:*_sound_resource",
-          "change": 0,
-          "operation": "set"
-        },
-        {
-          "type": "origins:execute_command",
-          "command": "team join salvagerOriginNeutralWardens"
-        }
-      ]
+      "type": "origins:change_resource",
+      "resource": "*:*_sound_resource",
+      "change": 0,
+      "operation": "set"
     }
   },
   "sound_resource": {
@@ -196,7 +187,7 @@
     "condition": {
       "type": "origins:resource",
       "resource": "*:*_resource",
-      "comaprison": ">",
+      "comparison": ">",
       "compare_to": 0
     }
   },
