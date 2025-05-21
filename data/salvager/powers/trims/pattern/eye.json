@@ -1,517 +1,582 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
-
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4
-	},
-
-	"entity_glow": {
-		"type": "origins:entity_glow",
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": ">",
-			"compare_to": 0
-		}
-	},
-
-	"invisibility": {
-		"type": "origins:invisibility",
-		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_cooldown_1",
-					"comparison": "!=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_cooldown_2",
-					"comparison": "!=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_cooldown_3",
-					"comparison": "!=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_cooldown_4",
-					"comparison": "!=",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"cooldown_1": {
-		"type": "origins:cooldown",
-		"cooldown": 100
-	},
-
-	"cooldown_2": {
-		"type": "origins:cooldown",
-		"cooldown": 200
-	},
-
-	"cooldown_3": {
-		"type": "origins:cooldown",
-		"cooldown": 300
-	},
-
-	"cooldown_4": {
-		"type": "origins:cooldown",
-		"cooldown": 400
-	},
-
-	"blindness_1": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 5,
-			"bientity_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:trigger_cooldown",
-							"power": "*:*_cooldown_1"
-						}
-					},
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 100,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 100,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					}
-				]
-			}
-		},
-		"cooldown": 300,
-		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
-		},
-		"key": { "key": "key.loadToolbarActivator" },
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"blindness_2": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 5,
-			"bientity_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:trigger_cooldown",
-							"power": "*:*_cooldown_2"
-						}
-					},
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 200,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 200,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					}
-				]
-			}
-		},
-		"cooldown": 400,
-		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
-		},
-		"key": { "key": "key.loadToolbarActivator" },
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"blindness_3": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 5,
-			"bientity_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:trigger_cooldown",
-							"power": "*:*_cooldown_3"
-						}
-					},
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 300,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 300,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					}
-				]
-			}
-		},
-		"cooldown": 500,
-		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
-		},
-		"key": { "key": "key.loadToolbarActivator" },
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 3
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"blindness_4": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 5,
-			"bientity_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:trigger_cooldown",
-							"power": "*:*_cooldown_4"
-						}
-					},
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 400,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:blindness",
-								"duration": 400,
-								"show_particles": false,
-								"show_icon": false
-							}
-						}
-					}
-				]
-			}
-		},
-		"cooldown": 600,
-		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
-		},
-		"key": { "key": "key.loadToolbarActivator" },
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 4
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_blindness_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:eye"
-					}
-				}
-			}
-		}
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:eye"
-					}
-				}
-			}
-		}
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:eye"
-					}
-				}
-			}
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:eye"
-					}
-				}
-			}
-		}
-	}
+  "type": "origins:multiple",
+  "hidden": true,
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4
+  },
+  "entity_glow": {
+    "type": "origins:entity_glow",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "invisibility": {
+    "type": "origins:invisibility",
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_cooldown_1",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_cooldown_2",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_cooldown_3",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_cooldown_4",
+          "comparison": "!=",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "cooldown_1": {
+    "type": "origins:cooldown",
+    "cooldown": 100
+  },
+  "cooldown_2": {
+    "type": "origins:cooldown",
+    "cooldown": 200
+  },
+  "cooldown_3": {
+    "type": "origins:cooldown",
+    "cooldown": 300
+  },
+  "cooldown_4": {
+    "type": "origins:cooldown",
+    "cooldown": 400
+  },
+  "blindness_1": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:area_of_effect",
+      "radius": 5,
+      "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:trigger_cooldown",
+              "power": "*:*_cooldown_1"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:execute_command",
+              "command": "scale set pehkui:visibility 0.3"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:delay",
+              "ticks": 100,
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale reset pehkui:visibility"
+              }
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 100,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 100,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cooldown": 300,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+    },
+    "key": {
+      "key": "key.loadToolbarActivator"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "blindness_2": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:area_of_effect",
+      "radius": 5,
+      "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:trigger_cooldown",
+              "power": "*:*_cooldown_2"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:execute_command",
+              "command": "scale set pehkui:visibility 0.3"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:delay",
+              "ticks": 200,
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale reset pehkui:visibility"
+              }
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 200,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 200,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cooldown": 400,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+    },
+    "key": {
+      "key": "key.loadToolbarActivator"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "blindness_3": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:area_of_effect",
+      "radius": 5,
+      "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:trigger_cooldown",
+              "power": "*:*_cooldown_3"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:execute_command",
+              "command": "scale set pehkui:visibility 0.3"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:delay",
+              "ticks": 300,
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale reset pehkui:visibility"
+              }
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 300,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 300,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cooldown": 500,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+    },
+    "key": {
+      "key": "key.loadToolbarActivator"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "blindness_4": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:area_of_effect",
+      "radius": 5,
+      "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:trigger_cooldown",
+              "power": "*:*_cooldown_4"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:execute_command",
+              "command": "scale set pehkui:visibility 0.3"
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:delay",
+              "ticks": 400,
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale reset pehkui:visibility"
+              }
+            }
+          },
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 400,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:blindness",
+                "duration": 400,
+                "show_particles": false,
+                "show_icon": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cooldown": 600,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+    },
+    "key": {
+      "key": "key.loadToolbarActivator"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 4
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_blindness_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:eye"
+          }
+        }
+      }
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:eye"
+          }
+        }
+      }
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:eye"
+          }
+        }
+      }
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:eye"
+          }
+        }
+      }
+    }
+  }
 }
