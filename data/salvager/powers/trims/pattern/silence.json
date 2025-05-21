@@ -1,19 +1,26 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
-
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4,
+  "type": "origins:multiple",
+  "hidden": true,
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4,
     "min_action": {
-      "type": "origins:change_resource",
-      "resource": "*:*_sound_resource",
-      "change": 0,
-      "operation": "set"
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_sound_resource",
+          "change": 0,
+          "operation": "set"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "team join salvagerOriginNeutralWardens"
+        }
+      ]
     }
-	},
-
+  },
   "sound_resource": {
     "type": "origins:resource",
     "min": 0,
@@ -28,7 +35,6 @@
       }
     }
   },
-
   "add_to_sound_res_1": {
     "type": "origins:action_when_hit",
     "bientity_action": {
@@ -46,7 +52,6 @@
       "compare_to": 1
     }
   },
-
   "add_to_sound_res_2": {
     "type": "origins:action_when_hit",
     "bientity_action": {
@@ -64,7 +69,6 @@
       "compare_to": 2
     }
   },
-
   "add_to_sound_res_3": {
     "type": "origins:action_when_hit",
     "bientity_action": {
@@ -82,7 +86,6 @@
       "compare_to": 3
     }
   },
-
   "add_to_sound_res_4": {
     "type": "origins:action_when_hit",
     "bientity_action": {
@@ -90,7 +93,7 @@
       "action": {
         "type": "origins:change_resource",
         "resource": "*:*_sound_resource",
-        "change": 6
+        "change": 8
       }
     },
     "condition": {
@@ -100,7 +103,6 @@
       "compare_to": 4
     }
   },
-
   "sonic_boom_attack": {
     "type": "origins:action_on_hit",
     "bientity_action": {
@@ -129,7 +131,6 @@
       "compare_to": 40
     }
   },
-
   "sculk_aoe": {
     "type": "origins:active_self",
     "entity_action": {
@@ -189,114 +190,127 @@
       "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
       "bar_index": 17
     },
-    "key": { "key": "key.loadToolbarActivator" }
+    "key": {
+      "key": "key.saveToolbarActivator"
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comaprison": ">",
+      "compare_to": 0
+    }
   },
-
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:silence"
-					}
-				}
-			}
-		}
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:silence"
-					}
-				}
-			}
-		}
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:silence"
-					}
-				}
-			}
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:silence"
-					}
-				}
-			}
-		}
-	}
+  "invisible_to_sculk_sensors": {
+    "type": "origins:prevent_game_event",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:silence"
+          }
+        }
+      }
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:silence"
+          }
+        }
+      }
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:silence"
+          }
+        }
+      }
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
+        "type": "origins:nbt",
+        "nbt": {
+          "Trim": {
+            "pattern": "minecraft:silence"
+          }
+        }
+      }
+    }
+  }
 }
