@@ -789,13 +789,25 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "head",
 			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:wayfinder"
-					}
-				}
-			}
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:nbt",
+            "nbt": {
+              "Trim": {
+                "pattern": "minecraft:wayfinder"
+              }
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            },
+            "inverted": true
+          }
+        ]
+      }
 		}
 	},
 
@@ -816,13 +828,25 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "chest",
 			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:wayfinder"
-					}
-				}
-			}
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:nbt",
+            "nbt": {
+              "Trim": {
+                "pattern": "minecraft:wayfinder"
+              }
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            },
+            "inverted": true
+          }
+        ]
+      }
 		}
 	},
 
@@ -843,13 +867,25 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "legs",
 			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:wayfinder"
-					}
-				}
-			}
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:nbt",
+            "nbt": {
+              "Trim": {
+                "pattern": "minecraft:wayfinder"
+              }
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            },
+            "inverted": true
+          }
+        ]
+      }
 		}
 	},
 
@@ -870,13 +906,25 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "feet",
 			"item_condition": {
-				"type": "origins:nbt",
-				"nbt": {
-					"Trim": {
-						"pattern": "minecraft:wayfinder"
-					}
-				}
-			}
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:nbt",
+            "nbt": {
+              "Trim": {
+                "pattern": "minecraft:wayfinder"
+              }
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            },
+            "inverted": true
+          }
+        ]
+      }
 		}
 	}
 }
