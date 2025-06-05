@@ -36,7 +36,6 @@
       }
     }
   },
-
   "chest": {
     "type": "origins:conditioned_attribute",
     "modifier": {
@@ -71,7 +70,6 @@
       }
     }
   },
-
   "legs": {
     "type": "origins:conditioned_attribute",
     "modifier": {
@@ -106,7 +104,6 @@
       }
     }
   },
-
   "feet": {
     "type": "origins:conditioned_attribute",
     "modifier": {
