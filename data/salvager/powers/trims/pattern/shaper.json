@@ -1,284 +1,276 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4
-	},
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4
+  },
 
-	"fall_dmg_invulnerability": {
-		"type": "origins:invulnerability",
-		"damage_condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:name",
-					"name": "fall"
-				},
-				{
-					"type": "origins:name",
-					"name": "fall.player"
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": ">=",
-			"compare_to": 1
-		}
-	},
+  "fall_dmg_invulnerability": {
+    "type": "origins:invulnerability",
+    "damage_condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:name",
+          "name": "fall"
+        },
+        {
+          "type": "origins:name",
+          "name": "fall.player"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": ">=",
+      "compare_to": 1
+    }
+  },
+  "water_breathing": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:water_breathing",
+        "duration": 6,
+        "show_particles": false
+      }
+    },
+    "falling_action": {
+      "type": "origins:clear_effect",
+      "effect": "minecraft:water_breathing"
+    },
+    "interval": 5,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": ">=",
+      "compare_to": 1
+    }
+  },
 
-	"water_breathing": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:water_breathing",
-				"duration": 6,
-				"show_particles": false
-			}
-		},
-		"falling_action": {
-			"type": "origins:clear_effect",
-			"effect": "minecraft:water_breathing"
-		},
-		"interval": 5,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": ">=",
-			"compare_to": 1
-		}
-	},
+  "size_0": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set 5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 1"
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+  "size_1": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set 5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 0.875"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 0.875"
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 1
+    }
+  },
+  "size_2": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set 5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 0.75"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 0.75"
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 2
+    }
+  },
+  "size_3": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set 5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 0.625"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 0.625"
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 3
+    }
+  },
+  "size_4": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set 5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 0.5"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 0.5"
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 4
+    }
+  },
 
-	"size_0": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set 5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:height 1"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:width 1"
-				}
-			]
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 0
-		}
-	},
+  "armour_attribute_1": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.armor",
+      "operation": "multiply_total",
+      "value": -0.3,
+      "name": "shaper armour, 70% armour"
+    },
+    "tick_rate": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 1
+    }
+  },
+  "armour_attribute_2": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.armor",
+      "operation": "multiply_total",
+      "value": -0.225,
+      "name": "shaper armour, 77.5% armour"
+    },
+    "tick_rate": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 2
+    }
+  },
+  "armour_attribute_3": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.armor",
+      "operation": "multiply_total",
+      "value": -0.15,
+      "name": "shaper armour, 85% armour"
+    },
+    "tick_rate": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 3
+    }
+  },
+  "armour_attribute_4": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.armor",
+      "operation": "multiply_total",
+      "value": -0.075,
+      "name": "shaper armour, 92.5% armour"
+    },
+    "tick_rate": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 4
+    }
+  },
 
-	"size_1": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set 5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:height 0.875"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:width 0.875"
-				}
-			]
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 1
-		}
-	},
-
-	"size_2": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set 5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:height 0.75"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:width 0.75"
-				}
-			]
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 2
-		}
-	},
-
-	"size_3": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set 5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:height 0.625"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:width 0.625"
-				}
-			]
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 3
-		}
-	},
-
-	"size_4": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set 5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:height 0.5"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:width 0.5"
-				}
-			]
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 4
-		}
-	},
-
-	"armour_attribute_1": {
-		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "multiply_total",
-			"value": -0.3,
-			"name": "shaper armour, 70% armour"
-		},
-		"tick_rate": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 1
-		}
-	},
-
-	"armour_attribute_2": {
-		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "multiply_total",
-			"value": -0.225,
-			"name": "shaper armour, 77.5% armour"
-		},
-		"tick_rate": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 2
-		}
-	},
-
-	"armour_attribute_3": {
-		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "multiply_total",
-			"value": -0.15,
-			"name": "shaper armour, 85% armour"
-		},
-		"tick_rate": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 3
-		}
-	},
-
-	"armour_attribute_4": {
-		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "multiply_total",
-			"value": -0.075,
-			"name": "shaper armour, 92.5% armour"
-		},
-		"tick_rate": 2,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 4
-		}
-	},
-
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -299,25 +291,24 @@
         ]
       }
     }
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -337,26 +328,25 @@
           }
         ]
       }
-		}
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -376,26 +366,25 @@
           }
         ]
       }
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -415,6 +404,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
