@@ -1,650 +1,644 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4
-	},
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4
+  },
 
-	"action_on_hit_1": {
-		"type": "origins:target_action_on_hit",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:choice",
-						"actions": [
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:blindness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:darkness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:hunger",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:mining_fatigue",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:nausea",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:poison",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:slowness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:unluck",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:weakness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:wither",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							}
-						]
-					},
-					"chance": 0.1
-				},
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:execute_command",
-						"command": "summon minecraft:lightning_bolt ~ ~ ~"
-					},
-					"chance": 0.05
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 1
-		}
-	},
+  "action_on_hit_1": {
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:choice",
+            "actions": [
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:blindness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:hunger",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:mining_fatigue",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:nausea",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:poison",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:slowness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:unluck",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:weakness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:wither",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              }
+            ]
+          },
+          "chance": 0.1
+        },
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:execute_command",
+            "command": "summon minecraft:lightning_bolt ~ ~ ~"
+          },
+          "chance": 0.05
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 1
+    }
+  },
+  "action_on_hit_2": {
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:choice",
+            "actions": [
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:blindness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:hunger",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:mining_fatigue",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:nausea",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:poison",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:slowness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:unluck",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:weakness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:wither",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              }
+            ]
+          },
+          "chance": 0.2
+        },
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:execute_command",
+            "command": "summon minecraft:lightning_bolt ~ ~ ~"
+          },
+          "chance": 0.1
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 2
+    }
+  },
+  "action_on_hit_3": {
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:choice",
+            "actions": [
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:blindness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:hunger",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:mining_fatigue",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:nausea",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:poison",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:slowness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:unluck",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:weakness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:wither",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              }
+            ]
+          },
+          "chance": 0.3
+        },
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:execute_command",
+            "command": "summon minecraft:lightning_bolt ~ ~ ~"
+          },
+          "chance": 0.15
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 3
+    }
+  },
+  "action_on_hit_4": {
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:choice",
+            "actions": [
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:blindness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:hunger",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:mining_fatigue",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:nausea",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:poison",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:slowness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:unluck",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:weakness",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "element": {
+                  "type": "origins:apply_effect",
+                  "effect": {
+                    "effect": "minecraft:wither",
+                    "duration": 300
+                  }
+                },
+                "weight": 1
+              }
+            ]
+          },
+          "chance": 0.4
+        },
+        {
+          "type": "origins:chance",
+          "action": {
+            "type": "origins:execute_command",
+            "command": "summon minecraft:lightning_bolt ~ ~ ~"
+          },
+          "chance": 0.2
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": "==",
+      "compare_to": 4
+    }
+  },
 
-	"action_on_hit_2": {
-		"type": "origins:target_action_on_hit",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:choice",
-						"actions": [
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:blindness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:darkness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:hunger",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:mining_fatigue",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:nausea",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:poison",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:slowness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:unluck",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:weakness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:wither",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							}
-						]
-					},
-					"chance": 0.2
-				},
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:execute_command",
-						"command": "summon minecraft:lightning_bolt ~ ~ ~"
-					},
-					"chance": 0.1
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 2
-		}
-	},
+  "modify_damage_dealt_1": {
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:predicate",
+          "predicate": "salvager:twenty_five_percent_chance"
+        }
+      ]
+    },
+    "modifier": {
+      "operation": "multiply_total_multiplicative",
+      "value": -0.75
+    }
+  },
+  "modify_damage_dealt_2": {
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:predicate",
+          "predicate": "salvager:thirty_percent_chance"
+        }
+      ]
+    },
+    "modifier": {
+      "operation": "multiply_total_multiplicative",
+      "value": -0.75
+    }
+  },
+  "modify_damage_dealt_3": {
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:predicate",
+          "predicate": "salvager:thirty_five_percent_chance"
+        }
+      ]
+    },
+    "modifier": {
+      "operation": "multiply_total_multiplicative",
+      "value": -0.75
+    }
+  },
+  "modify_damage_dealt_4": {
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 4
+        },
+        {
+          "type": "origins:predicate",
+          "predicate": "salvager:forty_percent_chance"
+        }
+      ]
+    },
+    "modifier": {
+      "operation": "multiply_total_multiplicative",
+      "value": -0.75
+    }
+  },
 
-	"action_on_hit_3": {
-		"type": "origins:target_action_on_hit",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:choice",
-						"actions": [
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:blindness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:darkness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:hunger",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:mining_fatigue",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:nausea",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:poison",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:slowness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:unluck",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:weakness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:wither",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							}
-						]
-					},
-					"chance": 0.3
-				},
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:execute_command",
-						"command": "summon minecraft:lightning_bolt ~ ~ ~"
-					},
-					"chance": 0.15
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 3
-		}
-	},
-
-	"action_on_hit_4": {
-		"type": "origins:target_action_on_hit",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:choice",
-						"actions": [
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:blindness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:darkness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:hunger",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:mining_fatigue",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:nausea",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:poison",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:slowness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:unluck",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:weakness",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							},
-							{
-								"element": {
-									"type": "origins:apply_effect",
-									"effect": {
-										"effect": "minecraft:wither",
-										"duration": 300
-									}
-								},
-								"weight": 1
-							}
-						]
-					},
-					"chance": 0.4
-				},
-				{
-					"type": "origins:chance",
-					"action": {
-						"type": "origins:execute_command",
-						"command": "summon minecraft:lightning_bolt ~ ~ ~"
-					},
-					"chance": 0.2
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_resource",
-			"comparison": "==",
-			"compare_to": 4
-		}
-	},
-
-	"modify_damage_dealt_1": {
-		"type": "origins:modify_damage_dealt",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:predicate",
-					"predicate": "salvager:twenty_five_percent_chance"
-				}
-			]
-		},
-		"modifier": {
-			"operation": "multiply_total_multiplicative",
-			"value": -0.75
-		}
-	},
-
-	"modify_damage_dealt_2": {
-		"type": "origins:modify_damage_dealt",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:predicate",
-					"predicate": "salvager:thirty_percent_chance"
-				}
-			]
-		},
-		"modifier": {
-			"operation": "multiply_total_multiplicative",
-			"value": -0.75
-		}
-	},
-
-	"modify_damage_dealt_3": {
-		"type": "origins:modify_damage_dealt",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 3
-				},
-				{
-					"type": "origins:predicate",
-					"predicate": "salvager:thirty_five_percent_chance"
-				}
-			]
-		},
-		"modifier": {
-			"operation": "multiply_total_multiplicative",
-			"value": -0.75
-		}
-	},
-
-	"modify_damage_dealt_4": {
-		"type": "origins:modify_damage_dealt",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 4
-				},
-				{
-					"type": "origins:predicate",
-					"predicate": "salvager:forty_percent_chance"
-				}
-			]
-		},
-		"modifier": {
-			"operation": "multiply_total_multiplicative",
-			"value": -0.75
-		}
-	},
-
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -664,26 +658,25 @@
           }
         ]
       }
-		}
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -703,26 +696,26 @@
           }
         ]
       }
-		}
-	},
+    }
+  },
 
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -742,26 +735,25 @@
           }
         ]
       }
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -781,6 +773,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
