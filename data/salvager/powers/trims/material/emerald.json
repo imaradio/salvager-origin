@@ -1,22 +1,22 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"head": {
-		"type": "origins:action_over_time",
-		"entity_action" : {
-			"type": "origins:equipped_item_action",
-			"equipment_slot": "head",
-			"action": {
-				"type": "origins:modify",
-				"modifier": "salvager:add_durability" 
-			}
-		},
-		"interval": 100,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "entity_action" : {
+      "type": "origins:equipped_item_action",
+      "equipment_slot": "head",
+      "action": {
+        "type": "origins:modify",
+        "modifier": "salvager:add_durability" 
+      }
+    },
+    "interval": 100,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -36,24 +36,23 @@
           }
         ]
       }
-		}
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"entity_action" : {
-			"type": "origins:equipped_item_action",
-			"equipment_slot": "chest",
-			"action": {
-				"type": "origins:modify",
-				"modifier": "salvager:add_durability" 
-			}
-		},
-		"interval": 100,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "entity_action" : {
+      "type": "origins:equipped_item_action",
+      "equipment_slot": "chest",
+      "action": {
+        "type": "origins:modify",
+        "modifier": "salvager:add_durability" 
+      }
+    },
+    "interval": 100,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -73,24 +72,23 @@
           }
         ]
       }
-		}
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"entity_action" : {
-			"type": "origins:equipped_item_action",
-			"equipment_slot": "legs",
-			"action": {
-				"type": "origins:modify",
-				"modifier": "salvager:add_durability" 
-			}
-		},
-		"interval": 100,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "entity_action" : {
+      "type": "origins:equipped_item_action",
+      "equipment_slot": "legs",
+      "action": {
+        "type": "origins:modify",
+        "modifier": "salvager:add_durability" 
+      }
+    },
+    "interval": 100,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -110,24 +108,23 @@
           }
         ]
       }
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"entity_action" : {
-			"type": "origins:equipped_item_action",
-			"equipment_slot": "feet",
-			"action": {
-				"type": "origins:modify",
-				"modifier": "salvager:add_durability" 
-			}
-		},
-		"interval": 100,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "entity_action" : {
+      "type": "origins:equipped_item_action",
+      "equipment_slot": "feet",
+      "action": {
+        "type": "origins:modify",
+        "modifier": "salvager:add_durability" 
+      }
+    },
+    "interval": 100,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -147,6 +144,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
