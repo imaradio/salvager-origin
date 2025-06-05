@@ -1,6 +1,7 @@
 {
   "type": "origins:multiple",
   "hidden": true,
+
   "resource": {
     "type": "origins:resource",
     "min": 0,
@@ -26,6 +27,7 @@
       }
     }
   },
+
   "add_to_sound_res_1": {
     "type": "origins:action_when_hit",
     "bientity_action": {
@@ -94,6 +96,7 @@
       "compare_to": 4
     }
   },
+
   "sonic_boom_attack": {
     "type": "origins:action_on_hit",
     "bientity_action": {
@@ -122,6 +125,7 @@
       "compare_to": 40
     }
   },
+
   "sculk_aoe": {
     "type": "origins:active_self",
     "entity_action": {
@@ -193,6 +197,7 @@
   },
   "invisible_to_sculk_sensors": {
     "type": "origins:prevent_game_event",
+    "tag": "minecraft:vibrations",
     "condition": {
       "type": "origins:resource",
       "resource": "*:*_resource",
@@ -200,6 +205,7 @@
       "compare_to": 0
     }
   },
+
   "head": {
     "type": "origins:action_over_time",
     "rising_action": {
