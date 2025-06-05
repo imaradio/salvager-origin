@@ -1,208 +1,205 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4
-	},
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4
+  },
 
-	"action_when_hit": {
-		"type": "origins:action_when_hit",
-		"bientity_action": {
-			"type": "origins:actor_action",
-			"action": {
-				"type": "origins:chance",
-				"chance": 0.5,
-				"action": {
-					"type": "origins:damage",
-					"amount": 8,
-					"damage_type": "minecraft:thorns"
-				}
-			}
-		},
-		"damage_condition": {
-			"type": "origins:in_tag",
-			"tag": "minecraft:avoids_guardian_thorns",
-			"inverted": true
-		},
-		"bientity_condition": {
-			"type": "origins:target_condition",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": ">",
-				"compare_to": 0
-			}
-		}
-	},
+  "action_when_hit": {
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+      "type": "origins:actor_action",
+      "action": {
+        "type": "origins:chance",
+        "chance": 0.5,
+        "action": {
+          "type": "origins:damage",
+          "amount": 8,
+          "damage_type": "minecraft:thorns"
+        }
+      }
+    },
+    "damage_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:avoids_guardian_thorns",
+      "inverted": true
+    },
+    "bientity_condition": {
+      "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": ">",
+        "compare_to": 0
+      }
+    }
+  },
 
-	"action_on_hit_1": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:heal",
-							"amount": 4
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:damage",
-							"amount": 4,
-							"damage_type": "magic"
-						}
-					}
-				]
-			},
-			"chance": 0.15
-		},
-		"bientity_condition": {
-			"type": "origins:actor_condition",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": "==",
-				"compare_to": 1
-			}
-		}
-	},
+  "action_on_hit_1": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:chance",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:heal",
+              "amount": 4
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:damage",
+              "amount": 4,
+              "damage_type": "magic"
+            }
+          }
+        ]
+      },
+      "chance": 0.15
+    },
+    "bientity_condition": {
+      "type": "origins:actor_condition",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": "==",
+        "compare_to": 1
+      }
+    }
+  },
+  "action_on_hit_2": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:chance",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:heal",
+              "amount": 4
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:damage",
+              "amount": 4,
+              "damage_type": "magic"
+            }
+          }
+        ]
+      },
+      "chance": 0.2
+    },
+    "bientity_condition": {
+      "type": "origins:actor_condition",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": "==",
+        "compare_to": 2
+      }
+    }
+  },
+  "action_on_hit_3": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:chance",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:heal",
+              "amount": 4
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:damage",
+              "amount": 4,
+              "damage_type": "magic"
+            }
+          }
+        ]
+      },
+      "chance": 0.25
+    },
+    "bientity_condition": {
+      "type": "origins:actor_condition",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": "==",
+        "compare_to": 3
+      }
+    }
+  },
+  "action_on_hit_4": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:chance",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:heal",
+              "amount": 4
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:damage",
+              "amount": 4,
+              "damage_type": "magic"
+            }
+          }
+        ]
+      },
+      "chance": 0.3
+    },
+    "bientity_condition": {
+      "type": "origins:actor_condition",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": "==",
+        "compare_to": 4
+      }
+    }
+  },
 
-	"action_on_hit_2": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:heal",
-							"amount": 4
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:damage",
-							"amount": 4,
-							"damage_type": "magic"
-						}
-					}
-				]
-			},
-			"chance": 0.2
-		},
-		"bientity_condition": {
-			"type": "origins:actor_condition",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": "==",
-				"compare_to": 2
-			}
-		}
-	},
-
-	"action_on_hit_3": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:heal",
-							"amount": 4
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:damage",
-							"amount": 4,
-							"damage_type": "magic"
-						}
-					}
-				]
-			},
-			"chance": 0.25
-		},
-		"bientity_condition": {
-			"type": "origins:actor_condition",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": "==",
-				"compare_to": 3
-			}
-		}
-	},
-
-	"action_on_hit_4": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:heal",
-							"amount": 4
-						}
-					},
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:damage",
-							"amount": 4,
-							"damage_type": "magic"
-						}
-					}
-				]
-			},
-			"chance": 0.3
-		},
-		"bientity_condition": {
-			"type": "origins:actor_condition",
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": "==",
-				"compare_to": 4
-			}
-		}
-	},
-
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -223,25 +220,24 @@
         ]
       }
     }
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -262,25 +258,24 @@
         ]
       }
     }
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -300,26 +295,25 @@
           }
         ]
       }
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -339,6 +333,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
