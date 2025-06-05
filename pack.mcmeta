@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "pack_format": 15,
-        "description": "armor trims yada yada etc"
-    }
+  "pack": {
+    "pack_format": 15,
+    "description": "Adds the Salvager origin, based around armour trims."
+  }
 }
