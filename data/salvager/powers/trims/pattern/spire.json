@@ -350,18 +350,27 @@
           "action": {
             "type": "origins:change_resource",
             "resource": "*:*_can_fly_bool",
-            "change": 1,
-            "operation": "set"
+            "change": 1
           }
         }
       ]
     },
     "interval": 2,
     "condition": {
-      "type": "origins:resource",
-      "resource": "*:*_resource",
-      "comparison": ">=",
-      "compare_to": 1
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": ">=",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:status_effect",
+          "effect": "minecraft:levitation",
+          "inverted": true
+        }
+      ]
     }
   },
 
