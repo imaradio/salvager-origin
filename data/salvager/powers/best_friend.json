@@ -1,102 +1,102 @@
 {
-	"type": "origins:multiple",
-	"name": "Salvager's Best Friend",
-	"description": "As your preferred tool, holding a pickaxe gives various buffs.",
+  "type": "origins:multiple",
+  "name": "Salvager's Best Friend",
+  "description": "As your preferred tool, holding a pickaxe gives various buffs.",
 
-	"night_vision": {
-		"type": "origins:night_vision",
-		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:pickaxes"
-						}
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:pickaxes"
-						}
-					}
-				}
-			]
-		}
-	},
+  "night_vision": {
+    "type": "origins:night_vision",
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "c:pickaxes"
+            }
+          }
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "offhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "c:pickaxes"
+            }
+          }
+        }
+      ]
+    }
+  },
 
-	"attribute": {
-		"type": "origins:conditioned_attribute",
-		"modifiers": [
-			{
-				"attribute": "minecraft:generic.attack_damage",
-				"operation": "addition",
-				"value": 4,
-				"name": "increased attack dmg when using pickaxe"
-			},
-			{
-				"attribute": "minecraft:generic.attack_speed",
-				"operation": "addition",
-				"value": 0.1,
-				"name": "increased attack speed when using pickaxe"
-			}
+  "attribute": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_damage",
+        "operation": "addition",
+        "value": 4,
+        "name": "increased attack dmg when using pickaxe"
+      },
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "operation": "addition",
+        "value": 0.1,
+        "name": "increased attack speed when using pickaxe"
+      }
 
-		],
-		"tick_rate": 4,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "mainhand",
-			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "c:pickaxes"
-				}
-			}
-		}
-	},
+    ],
+    "tick_rate": 4,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "c:pickaxes"
+        }
+      }
+    }
+  },
 
-	"modify_break_speed": {
-		"type": "origins:modify_break_speed",
-		"block_condition": {
-			"type": "origins:hardness",
-			"comparison": ">=",
-			"compare_to": 0
-		},
-		"modifier": {
-			"operation": "addition",
-			"value": 0.02
-		},
-		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:pickaxes"
-						}
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "c:pickaxes"
-						}
-					}
-				}
-			]
-		}
-	}
+  "modify_break_speed": {
+    "type": "origins:modify_break_speed",
+    "block_condition": {
+      "type": "origins:hardness",
+      "comparison": ">=",
+      "compare_to": 0
+    },
+    "modifier": {
+      "operation": "addition",
+      "value": 0.02
+    },
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "c:pickaxes"
+            }
+          }
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "offhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "c:pickaxes"
+            }
+          }
+        }
+      ]
+    }
+  }
 }
