@@ -1,11 +1,13 @@
 {
   "type": "origins:multiple",
   "hidden": true,
+
   "resource": {
     "type": "origins:resource",
     "min": 0,
     "max": 4
   },
+
   "entity_glow": {
     "type": "origins:entity_glow",
     "condition": {
@@ -47,6 +49,7 @@
       ]
     }
   },
+
   "cooldown_1": {
     "type": "origins:cooldown",
     "cooldown": 100
@@ -63,6 +66,7 @@
     "type": "origins:cooldown",
     "cooldown": 400
   },
+
   "blindness_1": {
     "type": "origins:active_self",
     "entity_action": {
@@ -419,6 +423,7 @@
       ]
     }
   },
+
   "head": {
     "type": "origins:action_over_time",
     "rising_action": {
