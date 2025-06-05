@@ -1,5 +1,5 @@
 {
-	"type": "origins:simple",
-	"name": "Master Forging",
-	"description": "Based on how you trim an armour piece, you gain varying abilities."
+  "type": "origins:simple",
+  "name": "Master Forging",
+  "description": "Based on how you trim an armour piece, you gain varying abilities."
 }
