@@ -1,309 +1,307 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4,
-		"min_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_flight_resource",
-			"change": 0,
-			"operation": "set"
-		}
-	},
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4,
+    "min_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_flight_resource",
+      "change": 0,
+      "operation": "set"
+    }
+  },
+  "flight_resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 200,
+    "min_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_can_fly_bool",
+      "change": 1
+    },
+    "hud_render": {
+      "bar_index": 4,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_resource",
+        "comparison": ">",
+        "compare_to": 0
+      }
+    }
+  },
+  "can_fly_bool": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+      "bar_index": 23,
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+          },
+          {
+            "type": "origins:resource",
+            "resource": "*:*_can_fly_bool",
+            "comparison": "==",
+            "compare_to": 1
+          }
+        ]
+      }
+    }
+  },
 
-	"flight_resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 200,
-		"min_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_can_fly_bool",
-			"change": 1
-		},
-		"hud_render": {
-			"bar_index": 4,
-			"condition": {
-				"type": "origins:resource",
-				"resource": "*:*_resource",
-				"comparison": ">",
-				"compare_to": 0
-			}
-		}
-	},
+  "toggle_can_fly_bool": {
+    "type": "origins:toggle",
+    "key": { "key": "key.spectatorOutlines" }
+  },
 
-	"can_fly_bool": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 1,
-		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
-			"bar_index": 23,
-			"condition": {
-				"type": "origins:and",
-				"conditions": [
-					{
-						"type": "origins:resource",
-						"resource": "*:*_resource",
-						"comparison": ">",
-						"compare_to": 0
-					},
-					{
-						"type": "origins:resource",
-						"resource": "*:*_can_fly_bool",
-						"comparison": "==",
-						"compare_to": 1
-					}
-				]
-			}
-		}
-	},
+  "action_on_hit_1": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:target_action",
+      "action": {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "minecraft:levitation",
+          "duration": 30,
+          "show_particles": false
+        }
+      }
+    },
+    "cooldown": 200,
+    "hud_render": {
+      "bar_index": 6
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "action_on_hit_2": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:target_action",
+      "action": {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "minecraft:levitation",
+          "duration": 60,
+          "show_particles": false
+        }
+      }
+    },
+    "cooldown": 200,
+    "hud_render": {
+      "bar_index": 6
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "action_on_hit_3": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:target_action",
+      "action": {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "minecraft:levitation",
+          "duration": 90,
+          "show_particles": false
+        }
+      }
+    },
+    "cooldown": 200,
+    "hud_render": {
+      "bar_index": 6
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "action_on_hit_4": {
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+      "type": "origins:target_action",
+      "action": {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "minecraft:levitation",
+          "duration": 120,
+          "show_particles": false
+        }
+      }
+    },
+    "cooldown": 200,
+    "hud_render": {
+      "bar_index": 6
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 4
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_1",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_2",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_3",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_action_on_hit_4",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
 
-	"toggle_can_fly_bool": {
-		"type": "origins:toggle",
-		"key": { "key": "key.spectatorOutlines" }
-	},
-
-	"action_on_hit_1": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:apply_effect",
-				"effect": {
-					"effect": "minecraft:levitation",
-					"duration": 30,
-					"show_particles": false
-				}
-			}
-		},
-		"cooldown": 200,
-		"hud_render": {
-			"bar_index": 6
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"action_on_hit_2": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:apply_effect",
-				"effect": {
-					"effect": "minecraft:levitation",
-					"duration": 60,
-					"show_particles": false
-				}
-			}
-		},
-		"cooldown": 200,
-		"hud_render": {
-			"bar_index": 6
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"action_on_hit_3": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:apply_effect",
-				"effect": {
-					"effect": "minecraft:levitation",
-					"duration": 90,
-					"show_particles": false
-				}
-			}
-		},
-		"cooldown": 200,
-		"hud_render": {
-			"bar_index": 6
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 3
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"action_on_hit_4": {
-		"type": "origins:action_on_hit",
-		"bientity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:apply_effect",
-				"effect": {
-					"effect": "minecraft:levitation",
-					"duration": 120,
-					"show_particles": false
-				}
-			}
-		},
-		"cooldown": 200,
-		"hud_render": {
-			"bar_index": 6
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 4
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_1",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_2",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_3",
-					"comparison": "==",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_action_on_hit_4",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-
-	"charge_flight_resource": {
-		"type": "origins:action_over_time",
-		"entity_action": {
+  "charge_flight_resource": {
+    "type": "origins:action_over_time",
+    "entity_action": {
       "type": "origins:change_resource",
       "resource": "*:*_flight_resource",
       "change": 1
-		},
-		"interval": 7,
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": ">=",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:status_effect",
-					"effect": "minecraft:levitation",
-					"inverted": true
-				}
-			]
-		}
-	},
+    },
+    "interval": 7,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": ">=",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:status_effect",
+          "effect": "minecraft:levitation",
+          "inverted": true
+        }
+      ]
+    }
+  },
   "check_if_can_fly": {
     "type": "origins:action_over_time",
     "entity_action": {
@@ -367,228 +365,228 @@
     }
   },
 
-	"active_self_1": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:levitation",
-							"duration": 6,
-							"amplifier": 1,
-							"show_particles": false
-						},
-						{
-							"effect": "minecraft:slow_falling",
-							"duration": 400,
-							"show_particles": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_flight_resource",
-					"change": -20
-				}
-			]
-		},
-		"cooldown": 5,
-		"key": {
-			"key": "key.jump",
-			"continuous": true
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_can_fly_bool",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"active_self_2": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:levitation",
-							"duration": 6,
-							"amplifier": 1,
-							"show_particles": false
-						},
-						{
-							"effect": "minecraft:slow_falling",
-							"duration": 400,
-							"show_particles": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_flight_resource",
-					"change": -15
-				}
-			]
-		},
-		"cooldown": 5,
-		"key": {
-			"key": "key.jump",
-			"continuous": true
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_can_fly_bool",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"active_self_3": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:levitation",
-							"duration": 6,
-							"amplifier": 1,
-							"show_particles": false
-						},
-						{
-							"effect": "minecraft:slow_falling",
-							"duration": 400,
-							"show_particles": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_flight_resource",
-					"change": -10
-				}
-			]
-		},
-		"cooldown": 5,
-		"key": {
-			"key": "key.jump",
-			"continuous": true
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 3
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_can_fly_bool",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
-	"active_self_4": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:levitation",
-							"duration": 6,
-							"amplifier": 1,
-							"show_particles": false
-						},
-						{
-							"effect": "minecraft:slow_falling",
-							"duration": 400,
-							"show_particles": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_flight_resource",
-					"change": -5
-				}
-			]
-		},
-		"cooldown": 5,
-		"key": {
-			"key": "key.jump",
-			"continuous": true
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_resource",
-					"comparison": "==",
-					"compare_to": 4
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_can_fly_bool",
-					"comparison": "==",
-					"compare_to": 0
-				}
-			]
-		}
-	},
+  "active_self_1": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:levitation",
+              "duration": 6,
+              "amplifier": 1,
+              "show_particles": false
+            },
+            {
+              "effect": "minecraft:slow_falling",
+              "duration": 400,
+              "show_particles": false
+            }
+          ]
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_flight_resource",
+          "change": -20
+        }
+      ]
+    },
+    "cooldown": 5,
+    "key": {
+      "key": "key.jump",
+      "continuous": true
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_can_fly_bool",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "active_self_2": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:levitation",
+              "duration": 6,
+              "amplifier": 1,
+              "show_particles": false
+            },
+            {
+              "effect": "minecraft:slow_falling",
+              "duration": 400,
+              "show_particles": false
+            }
+          ]
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_flight_resource",
+          "change": -15
+        }
+      ]
+    },
+    "cooldown": 5,
+    "key": {
+      "key": "key.jump",
+      "continuous": true
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_can_fly_bool",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "active_self_3": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:levitation",
+              "duration": 6,
+              "amplifier": 1,
+              "show_particles": false
+            },
+            {
+              "effect": "minecraft:slow_falling",
+              "duration": 400,
+              "show_particles": false
+            }
+          ]
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_flight_resource",
+          "change": -10
+        }
+      ]
+    },
+    "cooldown": 5,
+    "key": {
+      "key": "key.jump",
+      "continuous": true
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_can_fly_bool",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "active_self_4": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:levitation",
+              "duration": 6,
+              "amplifier": 1,
+              "show_particles": false
+            },
+            {
+              "effect": "minecraft:slow_falling",
+              "duration": 400,
+              "show_particles": false
+            }
+          ]
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_flight_resource",
+          "change": -5
+        }
+      ]
+    },
+    "cooldown": 5,
+    "key": {
+      "key": "key.jump",
+      "continuous": true
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_resource",
+          "comparison": "==",
+          "compare_to": 4
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_can_fly_bool",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
 
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -608,25 +606,25 @@
           }
         ]
       }
-		}
-	},
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -646,25 +644,25 @@
           }
         ]
       }
-		}
-	},
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -684,25 +682,25 @@
           }
         ]
       }
-		}
-	},
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -722,6 +720,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
