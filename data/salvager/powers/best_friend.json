@@ -4,22 +4,7 @@
 	"description": "As your preferred tool, holding a pickaxe gives various buffs.",
 
 	"night_vision": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:night_vision",
-				"duration": 300,
-				"is_ambient": true,
-				"show_particles": false,
-				"show_icon": false
-			}
-		},
-		"falling_action": {
-			"type": "origins:clear_effect",
-			"effect": "minecraft:night_vision"
-		},
-		"interval": 2,
+		"type": "origins:night_vision",
 		"condition": {
 			"type": "origins:or",
 			"conditions": [
