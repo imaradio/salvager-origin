@@ -1,373 +1,358 @@
 {
-	"type": "origins:multiple",
-	"name": "Smart Smithing",
-	"description": "After years of working on armour, you've grown frustrated at how ineffecient it is to craft armour trims. As such, you've developed a more cost-effective method to craft them.",
+  "type": "origins:multiple",
+  "name": "Smart Smithing",
+  "description": "After years of working on armour, you've grown frustrated at how ineffecient it is to craft armour trims. As such, you've developed a more cost-effective method to craft them.",
 
-	"sentry": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:sentry",
-			"ingredients": [
-				{
-					"item": "minecraft:sentry_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:cobblestone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:sentry_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"vex": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:vex",
-			"ingredients": [
-				{
-					"item": "minecraft:vex_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:cobblestone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:vex_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"wild": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:wild",
-			"ingredients": [
-				{
-					"item": "minecraft:wild_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:mossy_cobblestone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:wild_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"coast": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:coast",
-			"ingredients": [
-				{
-					"item": "minecraft:coast_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:cobblestone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:coast_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"dune": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:dune",
-			"ingredients": [
-				{
-					"item": "minecraft:dune_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:sandstone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:dune_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"wayfinder": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:wayfinder",
-			"ingredients": [
-				{
-					"item": "minecraft:wayfinder_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:terracotta"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:wayfinder_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"raiser": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:raiser",
-			"ingredients": [
-				{
-					"item": "minecraft:raiser_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:terracotta"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:raiser_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"shaper": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:shaper",
-			"ingredients": [
-				{
-					"item": "minecraft:shaper_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:terracotta"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:shaper_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"host": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:host",
-			"ingredients": [
-				{
-					"item": "minecraft:host_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:terracotta"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:host_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"ward": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:ward",
-			"ingredients": [
-				{
-					"item": "minecraft:ward_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:cobbled_deepslate"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:ward_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"silence": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:silence",
-			"ingredients": [
-				{
-					"item": "minecraft:silence_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:cobbled_deepslate"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:silence_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"tide": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:tide",
-			"ingredients": [
-				{
-					"item": "minecraft:tide_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:prismarine"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:tide_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"snout": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:snout",
-			"ingredients": [
-				{
-					"item": "minecraft:snout_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:blackstone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:snout_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"rib": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:rib",
-			"ingredients": [
-				{
-					"item": "minecraft:rib_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:netherrack"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:rib_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"eye": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:eye",
-			"ingredients": [
-				{
-					"item": "minecraft:eye_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:end_stone"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:eye_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	},
-
-	"spire": {
-		"type": "origins:recipe",
-		"recipe": {
-			"type": "minecraft:crafting_shapeless",
-			"id": "salvager:spire",
-			"ingredients": [
-				{
-					"item": "minecraft:spire_armor_trim_smithing_template"
-				},
-				{
-					"item": "minecraft:purpur_block"
-				},
-				{
-					"item": "minecraft:diamond"
-				}
-			],
-			"result": {
-				"item": "minecraft:spire_armor_trim_smithing_template",
-				"count": 2
-			}
-		}
-	}
+  "sentry": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:sentry",
+      "ingredients": [
+        {
+          "item": "minecraft:sentry_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:cobblestone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:sentry_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "vex": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:vex",
+      "ingredients": [
+        {
+          "item": "minecraft:vex_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:cobblestone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:vex_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "wild": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:wild",
+      "ingredients": [
+        {
+          "item": "minecraft:wild_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:mossy_cobblestone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:wild_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "coast": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:coast",
+      "ingredients": [
+        {
+          "item": "minecraft:coast_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:cobblestone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:coast_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "dune": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:dune",
+      "ingredients": [
+        {
+          "item": "minecraft:dune_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:sandstone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:dune_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "wayfinder": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:wayfinder",
+      "ingredients": [
+        {
+          "item": "minecraft:wayfinder_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:terracotta"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:wayfinder_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "raiser": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:raiser",
+      "ingredients": [
+        {
+          "item": "minecraft:raiser_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:terracotta"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:raiser_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "shaper": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:shaper",
+      "ingredients": [
+        {
+          "item": "minecraft:shaper_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:terracotta"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:shaper_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "host": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:host",
+      "ingredients": [
+        {
+          "item": "minecraft:host_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:terracotta"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:host_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "ward": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:ward",
+      "ingredients": [
+        {
+          "item": "minecraft:ward_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:cobbled_deepslate"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:ward_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "silence": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:silence",
+      "ingredients": [
+        {
+          "item": "minecraft:silence_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:cobbled_deepslate"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:silence_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "tide": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:tide",
+      "ingredients": [
+        {
+          "item": "minecraft:tide_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:prismarine"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:tide_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "snout": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:snout",
+      "ingredients": [
+        {
+          "item": "minecraft:snout_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:blackstone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:snout_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "rib": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:rib",
+      "ingredients": [
+        {
+          "item": "minecraft:rib_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:netherrack"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:rib_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "eye": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:eye",
+      "ingredients": [
+        {
+          "item": "minecraft:eye_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:end_stone"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:eye_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  },
+  "spire": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "salvager:spire",
+      "ingredients": [
+        {
+          "item": "minecraft:spire_armor_trim_smithing_template"
+        },
+        {
+          "item": "minecraft:purpur_block"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "result": {
+        "item": "minecraft:spire_armor_trim_smithing_template",
+        "count": 2
+      }
+    }
+  }
 }
