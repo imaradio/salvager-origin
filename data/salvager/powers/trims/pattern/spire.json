@@ -47,8 +47,8 @@
 					{
 						"type": "origins:resource",
 						"resource": "*:*_resource",
-						"comparison": ">=",
-						"compare_to": 1
+						"comparison": ">",
+						"compare_to": 0
 					},
 					{
 						"type": "origins:resource",
@@ -119,7 +119,6 @@
 			]
 		}
 	},
-
 	"action_on_hit_2": {
 		"type": "origins:action_on_hit",
 		"bientity_action": {
@@ -173,7 +172,6 @@
 			]
 		}
 	},
-
 	"action_on_hit_3": {
 		"type": "origins:action_on_hit",
 		"bientity_action": {
@@ -227,7 +225,6 @@
 			]
 		}
 	},
-
 	"action_on_hit_4": {
 		"type": "origins:action_on_hit",
 		"bientity_action": {
@@ -285,66 +282,9 @@
 	"charge_flight_resource": {
 		"type": "origins:action_over_time",
 		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_flight_resource",
-					"change": 1
-				},
-				{
-					"type": "origins:if_else_list",
-					"actions": [
-						{
-							"condition": {
-								"type": "origins:and",
-								"conditions": [
-									{
-										"type": "origins:resource",
-										"resource": "*:*_flight_resource",
-										"comparison": ">=",
-										"compare_to": 100
-									},
-									{
-										"type": "origins:power_active",
-										"power": "*:*_toggle_can_fly_bool",
-										"inverted": true
-									}
-								]
-							},
-							"action": {
-								"type": "origins:change_resource",
-								"resource": "*:*_can_fly_bool",
-								"change": 0,
-								"operation": "set"
-							}
-						},
-						{
-							"condition": {
-								"type": "origins:or",
-								"conditions": [
-									{
-										"type": "origins:resource",
-										"resource": "*:*_flight_resource",
-										"comparison": "<",
-										"compare_to": 100
-									},
-									{
-										"type": "origins:power_active",
-										"power": "*:*_toggle_can_fly_bool"
-									}
-								]
-							},
-							"action": {
-								"type": "origins:change_resource",
-								"resource": "*:*_can_fly_bool",
-								"change": 1,
-								"operation": "set"
-							}
-						}
-					]
-				}
-			]
+      "type": "origins:change_resource",
+      "resource": "*:*_flight_resource",
+      "change": 1
 		},
 		"interval": 7,
 		"condition": {
@@ -364,6 +304,68 @@
 			]
 		}
 	},
+  "check_if_can_fly": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "*:*_flight_resource",
+                "comparison": ">=",
+                "compare_to": 100
+              },
+              {
+                "type": "origins:power_active",
+                "power": "*:*_toggle_can_fly_bool",
+                "inverted": true
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_can_fly_bool",
+            "change": 0,
+            "operation": "set"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:or",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "*:*_flight_resource",
+                "comparison": "<",
+                "compare_to": 100
+              },
+              {
+                "type": "origins:power_active",
+                "power": "*:*_toggle_can_fly_bool"
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_can_fly_bool",
+            "change": 1,
+            "operation": "set"
+          }
+        }
+      ]
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_resource",
+      "comparison": ">=",
+      "compare_to": 1
+    }
+  },
 
 	"active_self_1": {
 		"type": "origins:active_self",
@@ -416,7 +418,6 @@
 			]
 		}
 	},
-
 	"active_self_2": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -468,7 +469,6 @@
 			]
 		}
 	},
-
 	"active_self_3": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -520,7 +520,6 @@
 			]
 		}
 	},
-
 	"active_self_4": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -611,7 +610,6 @@
       }
 		}
 	},
-
 	"chest": {
 		"type": "origins:action_over_time",
 		"rising_action": {
@@ -650,7 +648,6 @@
       }
 		}
 	},
-
 	"legs": {
 		"type": "origins:action_over_time",
 		"rising_action": {
@@ -689,7 +686,6 @@
       }
 		}
 	},
-
 	"feet": {
 		"type": "origins:action_over_time",
 		"rising_action": {
