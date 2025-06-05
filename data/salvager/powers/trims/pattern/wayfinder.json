@@ -1,13 +1,12 @@
 {
-	"type": "origins:multiple",
-	"hidden": true,
+  "type": "origins:multiple",
+  "hidden": true,
 
-	"resource": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 4
-	},
-
+  "resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4
+  },
   "double_jump_bool": {
     "type": "origins:resource",
     "min": 0,
@@ -36,7 +35,9 @@
         }
       ]
     },
-    "key": { "key": "key.jump" },
+    "key": {
+      "key": "key.jump"
+    },
     "condition": {
       "type": "origins:and",
       "conditions": [
@@ -59,7 +60,6 @@
       ]
     }
   },
-
   "double_jump_bool_reset": {
     "type": "origins:action_on_land",
     "entity_action": {
@@ -144,7 +144,6 @@
       ]
     }
   },
-
   "axe_2": {
     "type": "origins:active_self",
     "entity_action": {
@@ -220,7 +219,6 @@
       ]
     }
   },
-
   "axe_3": {
     "type": "origins:active_self",
     "entity_action": {
@@ -296,7 +294,6 @@
       ]
     }
   },
-
   "axe_4": {
     "type": "origins:active_self",
     "entity_action": {
@@ -549,7 +546,6 @@
       ]
     }
   },
-
   "sword_2": {
     "type": "origins:active_self",
     "entity_action": {
@@ -623,7 +619,6 @@
       ]
     }
   },
-
   "sword_3": {
     "type": "origins:active_self",
     "entity_action": {
@@ -697,7 +692,6 @@
       ]
     }
   },
-
   "sword_4": {
     "type": "origins:active_self",
     "entity_action": {
@@ -772,23 +766,23 @@
     }
   },
 
-	"head": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "head",
-			"item_condition": {
+  "head": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "head",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -808,26 +802,25 @@
           }
         ]
       }
-		}
-	},
-
-	"chest": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "chest",
-			"item_condition": {
+    }
+  },
+  "chest": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "chest",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -847,26 +840,25 @@
           }
         ]
       }
-		}
-	},
-
-	"legs": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "legs",
-			"item_condition": {
+    }
+  },
+  "legs": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "legs",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -886,26 +878,25 @@
           }
         ]
       }
-		}
-	},
-
-	"feet": {
-		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": 1
-		},
-		"falling_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_resource",
-			"change": -1
-		},
-		"interval": 2,
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "feet",
-			"item_condition": {
+    }
+  },
+  "feet": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_resource",
+      "change": -1
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "feet",
+      "item_condition": {
         "type": "origins:and",
         "conditions": [
           {
@@ -925,6 +916,6 @@
           }
         ]
       }
-		}
-	}
+    }
+  }
 }
