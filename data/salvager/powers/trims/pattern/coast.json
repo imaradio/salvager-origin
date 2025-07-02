@@ -32,8 +32,8 @@
                   "enchantment": "minecraft:aqua_affinity",
                   "comparison": "==",
                   "compare_to": 0
-                  }
-                ]
+                }
+              ]
             },
             {
               "type": "origins:and",
