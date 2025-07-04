@@ -152,7 +152,7 @@
                   "effect": {
                     "effect": "minecraft:regeneration",
                     "amplifier": 1,
-                    "duration": 100,
+                    "duration": 80,
                     "show_particles": false
                   }
                 },
@@ -235,7 +235,7 @@
                   "effect": {
                     "effect": "minecraft:regeneration",
                     "amplifier": 1,
-                    "duration": 160,
+                    "duration": 100,
                     "show_particles": false
                   }
                 },
@@ -318,7 +318,7 @@
                   "effect": {
                     "effect": "minecraft:regeneration",
                     "amplifier": 1,
-                    "duration": 220,
+                    "duration": 120,
                     "show_particles": false
                   }
                 },
@@ -401,7 +401,7 @@
                   "effect": {
                     "effect": "minecraft:regeneration",
                     "amplifier": 1,
-                    "duration": 280,
+                    "duration": 140,
                     "show_particles": false
                   }
                 },
